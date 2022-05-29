@@ -6,7 +6,7 @@ import "./HeroSection.css";
 function HeroSection() {
   return (
     <div className="hero-container">
-      <video src="/videos/TurtleVideo.mp4" autoPlay loop muted />
+      <video src="/videos/turtlevid.mp4" autoPlay loop muted />
       <h1>NOTRE GRAND BLEU</h1>
       <p>Let's be the saving eye of our Big Blue</p>
       <div className="hero-btns">
