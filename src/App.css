@@ -7,7 +7,8 @@
 
 .home,
 .services,
-.products,
+.posts,
+.events,
 .sign-up {
   display: flex;
   height: 90vh;
@@ -17,7 +18,7 @@
 }
 
 .services {
-  background-image: url('/images/img-2.jpg');
+  background-image: url('/images/HNq9L7F.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,17 +26,17 @@
   font-size: 100px;
 }
 
-.products {
-  background-image: url('/images/img-1.jpg');
+.posts {
+  background-image: url('/images/1321566.jpg');
   background-position: center;
   background-size: fill;
   background-repeat: no-repeat;
-  color: #fff;
+  color: rgb(201, 201, 201);
   font-size: 100px;
 }
 
 .sign-up {
-  background-image: url('/images/img-8.jpg');
+  background-image: url('/images/105-1050462_underwater-live-wallpaper-hd.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
