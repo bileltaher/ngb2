@@ -22,7 +22,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: rgb(201, 201, 201);
   font-size: 100px;
 }
 
@@ -35,11 +35,11 @@
   font-size: 100px;
 }
 
-.sign-up {
+.events {
   background-image: url('/images/105-1050462_underwater-live-wallpaper-hd.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: rgb(201, 201, 201);
   font-size: 100px;
 }
