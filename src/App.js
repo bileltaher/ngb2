@@ -9,6 +9,7 @@ import SignUp from "./components/pages/SignUp";
 import Footer from "./components/Footer";
 import Events from "./components/pages/Events";
 
+
 function App() {
   return (
     <>
