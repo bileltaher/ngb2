@@ -8,7 +8,7 @@ const FormSignup = ({ submitForm }) => {
     submitForm,
     validate
   );
-  console.log(errors);
+
   return (
     <div className="form-content-right">
       <form onSubmit={handleSubmit} className="form" noValidate>
@@ -21,24 +21,24 @@ const FormSignup = ({ submitForm }) => {
           <input
             className="form-input"
             type="text"
-            name="First Name"
+            name="firstName"
             placeholder="Enter your first name"
             value={values.firstname}
             onChange={handleChange}
           />
-          {errors.firstname && <p>{errors.firstname}</p>}
+          {errors.firstName && <p>{errors.firstName}</p>}
         </div>
         <div className="form-inputs">
           <label className="form-label">Last Name</label>
           <input
             className="form-input"
             type="text"
-            name="Last Name"
+            name="lastName"
             placeholder="Enter your last name"
             value={values.emlastnameail}
             onChange={handleChange}
           />
-          {errors.lastname && <p>{errors.lastname}</p>}
+          {errors.lastName && <p>{errors.lastName}</p>}
         </div>
         <div className="form-inputs">
           <label className="form-label">Email</label>
@@ -57,43 +57,55 @@ const FormSignup = ({ submitForm }) => {
           <input
             className="form-input"
             type="text"
-            name="Phone number"
+            name="phoneNumber"
             placeholder="Enter your phone number"
             value={values.phonenumber}
             onChange={handleChange}
           />
-          {errors.phonenumber && <p>{error.phonenumber}</p>}
+          {errors.phoneNumber && <p>{errors.phoneNumber}</p>}
         </div>
         <div className="form-inputs">
-          <label className="form-label">Phone number</label>
+          <label className="form-label">University</label>
           <input
             className="form-input"
             type="text"
-            name="Phone number"
-            placeholder="Enter your phone number"
-            value={values.phonenumber}
+            name="university"
+            placeholder="Enter your university"
+            value={values.university}
             onChange={handleChange}
           />
-          {errors.phonenumber && <p>{error.phonenumber}</p>}
+          {errors.university && <p>{errors.university}</p>}
         </div>
         <div className="form-inputs">
-          <label className="form-label">Phone number</label>
+          <label className="form-label">Speciality</label>
           <input
             className="form-input"
             type="text"
-            name="Phone number"
-            placeholder="Enter your phone number"
+            name="speciality"
+            placeholder="Enter your speciality"
+            value={values.speciality}
+            onChange={handleChange}
+          />
+          {errors.speciality && <p>{errors.speciality}</p>}
+        </div>
+        <div className="form-inputs">
+          <label className="form-label">Topic title</label>
+          <input
+            className="form-input"
+            type="text"
+            name="topicTitle"
+            placeholder="Enter your topic title"
             value={values.phonenumber}
             onChange={handleChange}
           />
-          {errors.phonenumber && <p>{error.phonenumber}</p>}
+          {errors.topicTitle && <p>{errors.topicTitle}</p>}
         </div>
         <div className="form-inputs">
           <label className="form-label">City</label>
           <input
             className="form-input"
             type="text"
-            name="City"
+            name="city"
             placeholder="Enter your city"
             value={values.city}
             onChange={handleChange}
