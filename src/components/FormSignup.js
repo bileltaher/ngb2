@@ -119,7 +119,7 @@ const FormSignup = ({ submitForm }) => {
           Browse
         </button>
         <button className="form-input-btn" type="submit">
-          Next
+          Submit
         </button>
       </form>
     </div>
