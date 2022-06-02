@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MenuItems } from "./MenuItems";
 import "./Dropdown.css";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 function Dropdown() {
   const [click, setClick] = useState(false);
@@ -17,13 +17,13 @@ function Dropdown() {
         {MenuItems.map((item, index) => {
           return (
             <li key={index}>
-              <Link
+              <HashLink
                 className={item.cName}
                 to={item.path}
                 onClick={() => setClick(false)}
               >
                 {item.title}
-              </Link>
+              </HashLink>
             </li>
           );
         })}

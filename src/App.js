@@ -19,9 +19,6 @@ function App() {
         <Navbar />
         <Route>
           <Route path="/" exact component={Home} />
-          <Route path="/" exact component={Stage} />
-          <Route path="/" exact component={Documents} />
-          <Route path="/" exact component={Reports} />
           <Route path="/services" component={Services} />
           <Route path="/posts" component={Posts} />
           <Route path="/sign-up" component={SignUp} />
