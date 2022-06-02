@@ -4,7 +4,7 @@ import useForm from "./useForm";
 import "./Form.css";
 
 const FormSignup = ({ submitForm }) => {
-  const { handleChange, handleSubmit, values, errors } = useForm(
+  const { handleChange, handleSubmit, values, errors, register } = useForm(
     submitForm,
     validate
   );
@@ -95,7 +95,7 @@ const FormSignup = ({ submitForm }) => {
             type="text"
             name="topicTitle"
             placeholder="Enter your topic title"
-            value={values.phonenumber}
+            value={values.topicTitle}
             onChange={handleChange}
           />
           {errors.topicTitle && <p>{errors.topicTitle}</p>}
@@ -115,7 +115,8 @@ const FormSignup = ({ submitForm }) => {
         <span className="form-input-login">
           Please submit your resume(CV) and motivation letter
         </span>
-        <button className="form-input-btn" type="file">
+        <input ref={register} type="file" name="picture" />
+        <button type="file" className="form-input-btn">
           Browse
         </button>
         <button className="form-input-btn" type="submit">

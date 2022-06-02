@@ -8,7 +8,9 @@ import Posts from "./components/pages/Posts";
 import SignUp from "./components/pages/SignUp";
 import Footer from "./components/Footer";
 import Events from "./components/pages/Events";
-
+import Stage from "./components/pages/Stage";
+import Reports from "./components/pages/Reports";
+import Documents from "./components/pages/Documents";
 
 function App() {
   return (
@@ -17,6 +19,9 @@ function App() {
         <Navbar />
         <Route>
           <Route path="/" exact component={Home} />
+          <Route path="/" exact component={Stage} />
+          <Route path="/" exact component={Documents} />
+          <Route path="/" exact component={Reports} />
           <Route path="/services" component={Services} />
           <Route path="/posts" component={Posts} />
           <Route path="/sign-up" component={SignUp} />
