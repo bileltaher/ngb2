@@ -1,21 +1,25 @@
+.image-slider {
+  background: rgb(255, 255, 255);
+}
+
 .slider {
   position: relative;
-  height: 100vh;
+  height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .image {
-  width: 400px;
-  height: 400px;
+  width: 700px;
+  height: 450px;
   border-radius: 10px;
 }
 
 .right-arrow {
   position: absolute;
   top: 50%;
-  right: 300px;
+  right: 200px;
   font-size: 3rem;
   color: rgb(18, 99, 175);
   z-index: 10;
@@ -26,7 +30,7 @@
 .left-arrow {
   position: absolute;
   top: 50%;
-  left: 300px;
+  left: 200px;
   font-size: 3rem;
   color: rgb(18, 99, 175);
   z-index: 10;
@@ -44,3 +48,12 @@
   transition-duration: 1s;
   transform: scale(1.08);
 }
+
+.image-h2-slider
+
+  h2 { color: #e41616;
+     font-family: 'Raleway',sans-serif;
+      font-size: 300px; font-weight: 800;
+       line-height: 36px;
+        margin: 0 0 24px;
+         text-align: center; }
