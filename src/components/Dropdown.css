@@ -28,9 +28,13 @@
     color: #fff;
     padding: 16px;
   }
-  
+  .fa-caret-down
+  {
+    padding: 5px;
+  }
   @media screen and (max-width: 960px) {
     .fa-caret-down {
+      
       display: none;
     }
   }

@@ -11,13 +11,13 @@ function Home() {
       src: "images/nousrec.png",
       text: "Call for applications",
       label: "Applications",
-      path: "/services",
+      path: "/posts",
     },
     {
       src: "images/img-off.jpg",
       text: "Call for offers",
       label: "Applications",
-      path: "/services",
+      path: "/posts",
     },
   ];
   const items2 = [
@@ -25,19 +25,19 @@ function Home() {
       src: "images/202212515117.jpg",
       text: "Winter Count of Seabirds on the Kuriat Islands",
       label: "Adventure",
-      path: "/services",
+      path: "/posts",
     },
     {
       src: "images/202121113028.jpg",
       text: "Kuriat: an island adventure in the Mediterranean",
-      label: "Applications",
-      path: "/services",
+      label: "Adventure",
+      path: "/posts",
     },
     {
       src: "images/4864531.jpg",
       text: "Let's not forget about the turtles!",
-      label: "Adrenaline",
-      path: "/services",
+      label: "Adventure",
+      path: "/posts",
     },
   ];
   return (
