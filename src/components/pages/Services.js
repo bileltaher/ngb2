@@ -1,6 +1,6 @@
 import React from "react";
 import "../../App.css";
-import Form from "../../components/Form";
+
 import Documents from "./Documents";
 import Reports from "./Reports";
 import Stage from "./Stage";

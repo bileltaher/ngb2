@@ -2,6 +2,7 @@ import React from "react";
 import validate from "./validateInfo";
 import useForm from "./useForm";
 import "./Form.css";
+import UploadButtons from "./uploadbutton";
 
 const FormSignup = ({ submitForm }) => {
   const { handleChange, handleSubmit, values, errors, register } = useForm(
@@ -12,7 +13,7 @@ const FormSignup = ({ submitForm }) => {
   return (
     <div className="form-content-right">
       <form onSubmit={handleSubmit} className="form" noValidate>
-        <h1>
+        <h1 className="sign-up-ngb-text">
           Get your internship started with NGB , Apply by filling out the
           information below.
         </h1>
@@ -115,13 +116,7 @@ const FormSignup = ({ submitForm }) => {
         <span className="form-input-login">
           Please submit your resume(CV) and motivation letter
         </span>
-        <input ref={register} type="file" name="picture" />
-        <button type="file" className="form-input-btn">
-          Browse
-        </button>
-        <button className="form-input-btn" type="submit">
-          Submit
-        </button>
+        <UploadButtons>upload</UploadButtons>
       </form>
     </div>
   );
