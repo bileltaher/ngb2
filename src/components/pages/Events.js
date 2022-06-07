@@ -1,9 +1,10 @@
 import React from "react";
+import Testbtn2 from "../Testbtn2";
 
 export default function Events() {
   return (
-    <>
-      <h1 className="Events">Events</h1>
-    </>
+    <div>
+      <Testbtn2 />
+    </div>
   );
 }
