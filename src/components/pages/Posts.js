@@ -10,7 +10,7 @@ function Posts() {
   const [page, setPage] = useState(1);
   const [displayed, setDisplayed] = useState([]);
   const getPosts = async () => {
-    const { data } = await axios.get("http://localhost:5000/post%22");
+    const { data } = await axios.get("http://localhost:5000/post");
     setPosts(data);
   };
 

@@ -1,7 +1,8 @@
+
 table{
     
     font-family: Arial, Helvetica, sans-serif;
-border-collapse: collapse;
+    border-collapse: collapse;
     width: 100%;
 }
 
@@ -30,5 +31,18 @@ th{
     text-align: center;
   }
   
+  .button{
+    color: black;
+    background-color: rgb(163 219 229);
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 12px;
+  }
 
-  
+  .button.active {
+    background-color: #09a0bb;
+    color: white;
+  }
+
+  .button:hover:not(.active) {background-color: #09a0bb;}

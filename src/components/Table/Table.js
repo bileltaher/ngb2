@@ -26,9 +26,17 @@ const Table = ({
           {data &&
             data.map((row) => (
               <tr className={`${hover && "hover"} ${striped && "striped"}`}>
-                {columns.map((col) => (
-                  <td>{row[col.field]}</td>
-                ))}
+                {columns.map((col) =>
+                  row[col.field].split("@")[0] === "link" ? (
+                    <td>
+                      <a href={row[col.field].split("@")[1]} className="button">
+                        Download
+                      </a>
+                    </td>
+                  ) : (
+                    <td>{row[col.field]}</td>
+                  )
+                )}
               </tr>
             ))}
         </tbody>
