@@ -37,6 +37,7 @@ video {
 }
 
 .hero-btns .btn {
+  border-radius: 12px;
   margin: 6px;
 }
 

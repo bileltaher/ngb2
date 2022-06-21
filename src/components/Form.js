@@ -11,19 +11,21 @@ const Form = () => {
   }
   return (
     <>
-      <div className="form-container">
-        <div className="form-content-left">
-          <img
-            className="form-img"
-            src="../images/Logo_NGB.png"
-            alt="spaceship"
-          />
+      <div className="container">
+        <div className="form-container">
+          <div className="form-content-left">
+            <img
+              className="form-img"
+              src="../images/Logo_NGB.png"
+              alt="spaceship"
+            />
+          </div>
+          {!isSubmitted ? (
+            <FormSignup submitForm={submitForm} />
+          ) : (
+            <FormSuccess />
+          )}
         </div>
-        {!isSubmitted ? (
-          <FormSignup submitForm={submitForm} />
-        ) : (
-          <FormSuccess />
-        )}
       </div>
     </>
   );
