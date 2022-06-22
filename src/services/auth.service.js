@@ -28,7 +28,7 @@ export class AuthService {
     });
   }
 
-  getCurrentUser() {
+  static getCurrentUser() {
     return JSON.parse(localStorage.getItem("user"));
   }
 }

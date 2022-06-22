@@ -1,18 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import Dropdown from "./Dropdown";
+import { AuthService } from "../services/auth.service";
+import { UserContext } from "../services/UserContext";
 
 function Navbar() {
   const [dropdown, setDropdown] = useState(false);
-
+  const [dropdown1, setDropdown1] = useState(false);
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-
+  const userContext = useContext(UserContext);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-
   const onMouseEnter = () => {
     if (window.innerWidth < 960) {
       setDropdown(false);
@@ -82,10 +83,12 @@ function Navbar() {
                 Events
               </Link>
             </li>
-            <Link className="nav-links" onClick={closeMobileMenu}>
-              About us <i className="fas fa-caret-down" />
-              {dropdown && <Dropdown />}
-            </Link>
+            <li>
+              <Link className="nav-links" onClick={closeMobileMenu}>
+                About us <i className="fas fa-caret-down" />
+                {dropdown1 && <Dropdown />}
+              </Link>
+            </li>
             <li>
               <Link
                 to="/sign-up"
@@ -96,7 +99,22 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline">Admin Sign-Up</Button>}
+          {button &&
+            (userContext?.user ? (
+              <Button
+                onClick={() => {
+                  AuthService.logout();
+                  userContext.setUser(null);
+                }}
+                buttonStyle="btn--outline"
+              >
+                Log out
+              </Button>
+            ) : (
+              <Button link="sign-up" buttonStyle="btn--outline">
+                Admin Sign-Up
+              </Button>
+            ))}
         </div>
       </nav>
     </>

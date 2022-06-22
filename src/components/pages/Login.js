@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -12,6 +12,7 @@ import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { AuthService } from "../../services/auth.service";
 import Image from "../../photos/LoginBanner.png";
+import { UserContext } from "../../services/UserContext";
 
 function Copyright(props) {
   return (
@@ -38,12 +39,15 @@ export default function SignInSide() {
   const [emailError, setEmailError] = useState("");
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
-
+  const userContext = useContext(UserContext);
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     AuthService.login(data.get("email"), data.get("password"))
-      .then(() => history.push("/"))
+      .then((response) => {
+        userContext.setUser(response.user);
+        history.push("/");
+      })
       .catch((error) => {
         setPasswordError(error.response.data["passwordincorrect"] ?? "");
         setEmailError(error.response.data["email"] ?? "");
