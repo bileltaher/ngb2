@@ -4,10 +4,8 @@ import { tableData } from "../Table/Data";
 import "../Table/Table.css";
 
 const columns = [
-  ,
   { field: "title", header: "Title" },
   { field: "document", header: "Document" },
-  ,
 ];
 
 export default function Documents() {

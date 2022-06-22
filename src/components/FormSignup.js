@@ -5,7 +5,7 @@ import "./Form.css";
 import UploadButtons from "./uploadbutton";
 
 const FormSignup = ({ submitForm }) => {
-  const { handleChange, handleSubmit, values, errors, register } = useForm(
+  const { handleChange, handleSubmit, values, errors } = useForm(
     submitForm,
     validate
   );

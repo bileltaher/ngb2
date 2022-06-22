@@ -10,6 +10,7 @@ import Events from "./components/pages/Events";
 import Stage from "./components/pages/Stage";
 import Reports from "./components/pages/Reports";
 import Documents from "./components/pages/Documents";
+import SignInSide from "./components/pages/Login";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
 
         <Route>
           <Route path="/" exact component={Home} />
+          <Route path="/login" exact component={SignInSide} />
           <Route path="/stage" component={Stage} />
           <Route path="/reports" component={Reports} />
           <Route path="/documents" component={Documents} />

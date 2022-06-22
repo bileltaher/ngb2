@@ -2,7 +2,6 @@ import * as React from "react";
 import "./SelectedPost.css";
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en";
-import { Button } from "@mui/material";
 
 export default function SelectedPost({ title, description, image, date }) {
   TimeAgo.addDefaultLocale(en);

@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import UndoIcon from "@mui/icons-material/Undo";
 import "./Posts.css";
 
-import MUIcards from "../MUIcards";
 import SelectedPost from "../selectedpost/SelectedPost";
 import Button from "@material-ui/core/Button";
 

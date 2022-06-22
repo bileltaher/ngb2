@@ -8,7 +8,6 @@ const useForm = (callback, validate) => {
     phoneNumber: "",
     university: "",
     speciality: "",
-    speciality: "",
     topicTitle: "",
     city: "",
   });

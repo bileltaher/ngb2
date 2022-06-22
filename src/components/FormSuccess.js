@@ -8,7 +8,7 @@ const FormSuccess = () => {
       <img
         className="form-img-2"
         src="images/_succee-form-submit-icon.png"
-        alt="success-image"
+        alt="success"
       />
     </div>
   );
