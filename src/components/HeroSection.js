@@ -21,7 +21,7 @@ function HeroSection() {
           className="btns"
           buttonStyle="btn--primary"
           buttonSize="btn--large"
-          onClick={console.log("hey")}
+          onClick={() => {}}
         >
           Contact Us
         </Button>

@@ -4,7 +4,6 @@ import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import { useHistory } from "react-router-dom";
-import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -46,12 +45,9 @@ export default function SignInSide() {
     AuthService.login(data.get("email"), data.get("password"))
       .then(() => history.push("/"))
       .catch((error) => {
-        const errName = Object.keys(error.response.data)[0];
-        if (error.response.data[errName].split(" ")[0] === "Email") {
-          setEmailError(error.response.data[errName]);
-        } else {
-          setPasswordError(error.response.data[errName]);
-        }
+        setPasswordError(error.response.data["passwordincorrect"] ?? "");
+        setEmailError(error.response.data["email"] ?? "");
+        setEmailError(error.response.data["emailnotfound"] ?? "");
       });
   };
 

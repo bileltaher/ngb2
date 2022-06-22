@@ -19,13 +19,15 @@ export class AuthService {
   static logout() {
     localStorage.removeItem("user");
   }
-  static register(name, email, password) {
-    return axios.post(API_URL + "register", {
+  static register(name, email, password, password2) {
+    return axios.post(API_URL + "/register", {
       name,
       email,
       password,
+      password2,
     });
   }
+
   getCurrentUser() {
     return JSON.parse(localStorage.getItem("user"));
   }
