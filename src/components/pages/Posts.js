@@ -41,7 +41,7 @@ function Posts() {
   );
 
   useEffect(() => {
-    setDisplayed(posts.slice((page - 1) * 8, page * 8));
+    setDisplayed(posts.slice((page - 1) * 9, page * 9));
   }, [page]);
   return (
     <>
@@ -52,7 +52,7 @@ function Posts() {
         <div className="cards-container">
           <Grid container spacing={3} alignItems="stretch">
             {displayed.map((card) => (
-              <Grid item xs={6} sm={4} xl={3} className="card">
+              <Grid item xs={12} sm={6} lg={4} xl={3} className="card">
                 <SelectedPost {...card} setState={setPosts} state={posts} />
               </Grid>
             ))}
