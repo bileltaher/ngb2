@@ -1,11 +1,7 @@
 import * as React from "react";
 import "./SelectedPost.css";
-import TimeAgo from "javascript-time-ago";
-import en from "javascript-time-ago/locale/en";
 
 export default function SelectedPost({ title, description, image, date }) {
-  TimeAgo.addDefaultLocale(en);
-  const timeAgo = new TimeAgo("en-US");
   const MONTH_MAP = [
     "January",
     "February",
@@ -22,13 +18,12 @@ export default function SelectedPost({ title, description, image, date }) {
   ];
 
   const renderedDate = new Date(date);
-
   return (
     <>
       <article class="card">
         <div class="card__media">
           <img
-            src={"https://notregrandbleu.org/assets/img/posts/" + image}
+            src={window.location.origin + "/uploads/posts/" + image}
             alt="SelectedPost"
           />
           <div class="card__date">
@@ -46,12 +41,6 @@ export default function SelectedPost({ title, description, image, date }) {
             <div class="card__subtitle">{title}</div>
           </header>
           <p class="card__excerpt">{description}</p>
-
-          <footer class="card__category" role="contentinfo">
-            <span class="card__post-date">
-              {timeAgo.format(Date.now() - renderedDate.getTime() / 1000)}
-            </span>
-          </footer>
         </div>
       </article>
       <br />

@@ -12,9 +12,11 @@ import Reports from "./components/pages/Reports";
 import Documents from "./components/pages/Documents";
 import SignInSide from "./components/pages/Login";
 import { UserContext } from "./services/UserContext";
+import { AuthService } from "./services/auth.service";
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(AuthService.getCurrentUser());
+  const currentUser = AuthService.getCurrentUser();
 
   return (
     <>
