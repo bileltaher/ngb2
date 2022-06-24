@@ -117,6 +117,9 @@ const FormSignup = ({ submitForm }) => {
           Please submit your resume(CV) and motivation letter
         </span>
         <UploadButtons>upload</UploadButtons>
+        <button className="form-input-btn" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );
