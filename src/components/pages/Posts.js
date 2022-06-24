@@ -53,7 +53,7 @@ function Posts() {
           <Grid container spacing={3} alignItems="stretch">
             {displayed.map((card) => (
               <Grid item xs={6} sm={4} xl={3} className="card">
-                <SelectedPost {...card} />
+                <SelectedPost {...card} setState={setPosts} state={posts} />
               </Grid>
             ))}
           </Grid>

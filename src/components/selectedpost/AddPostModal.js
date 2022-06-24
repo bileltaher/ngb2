@@ -21,7 +21,6 @@ const Modal = () => {
     const data = new FormData();
 
     data.append("files", file);
-    console.log(data.getFiles);
     let image = "";
     await axios
       .post("http://localhost:5000/post/uploads", data, {
@@ -33,11 +32,13 @@ const Modal = () => {
         image = response.data.fich[0].originalname;
       });
     if (image !== "") {
-      axios.post("http://localhost:5000/post/addPost", {
-        title,
-        description,
-        image,
-      });
+      axios
+        .post("http://localhost:5000/post/addPost", {
+          title,
+          description,
+          image,
+        })
+        .then(() => window.location.reload(false));
     }
   };
   return (

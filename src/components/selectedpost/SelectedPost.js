@@ -1,7 +1,11 @@
 import * as React from "react";
 import "./SelectedPost.css";
+import DeleteIcon from "@mui/icons-material/Delete";
+import { IconButton } from "@mui/material";
+import axios from "axios";
+import { UserContext } from "../../services/UserContext";
 
-export default function SelectedPost({ title, description, image, date }) {
+export default function SelectedPost({ _id, title, description, image, date }) {
   const MONTH_MAP = [
     "January",
     "February",
@@ -16,7 +20,14 @@ export default function SelectedPost({ title, description, image, date }) {
     "November",
     "December",
   ];
-
+  const userContext = React.useContext(UserContext);
+  const handleDelete = async () => {
+    await axios
+      .get("http://localhost:5000/post/deletePost/" + _id)
+      .then((response) => {
+        window.location.reload(false);
+      });
+  };
   const renderedDate = new Date(date);
   return (
     <>
@@ -36,6 +47,11 @@ export default function SelectedPost({ title, description, image, date }) {
         </div>
 
         <div class="card__content">
+          {userContext.user && (
+            <IconButton color="primary" aria-label="delete" component="span">
+              <DeleteIcon onClick={handleDelete} />
+            </IconButton>
+          )}
           <header class="card__header">
             <h2 class="card__title">{title}</h2>
             <div class="card__subtitle">{title}</div>
